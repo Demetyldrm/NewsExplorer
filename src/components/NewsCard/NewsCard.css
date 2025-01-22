@@ -1,0 +1,227 @@
+.newscard__keyword {
+  position: absolute;
+  max-height: 40px;
+  max-width: 120px;
+  left: 32px;
+  top: 32px;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #000;
+  overflow: hidden;
+  background-color: #fff;
+  padding: 13px 15px;
+  border-radius: 8px;
+}
+
+.newscard__bookmark {
+  position: absolute;
+  display: flex;
+  max-height: 40px;
+  right: 24px;
+  top: 24px;
+  gap: 8px;
+}
+
+.newscard__bookmark-button {
+  background: no-repeat url("../../images/bookmark-button-normal.svg") #fff;
+  background-position: center;
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+}
+
+.newscard__bookmark-message {
+  font-family: "Roboto", sans-serif;
+  max-height: 40px;
+  background-color: #fff;
+  max-width: 175px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 14.06px;
+  font-weight: 500;
+  padding: 13px 15px;
+  border-radius: 8px;
+  color: #000;
+}
+
+.newscard__bookmark-button:hover {
+  background: no-repeat url("../../images/bookmark-button-hover.svg") #fff;
+}
+
+.newscard__bookmark-button-active {
+  background: no-repeat url("../../images/bookmark-button-marked.svg") #fff;
+  background-position: center;
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+}
+
+.newscard__delete-button {
+  background: no-repeat url("../../images/delete-button-normal.svg") #fff;
+  background-position: center;
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+}
+
+.newscard__delete-button:hover {
+  background: no-repeat url("../../images/delete-button-hover.svg") #fff;
+}
+
+.newscard__container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 400px;
+}
+
+.newscard__image {
+  height: 272px;
+  border-radius: 25px 25px 0 0;
+}
+
+.newscard__info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 400px;
+  background-color: #fff;
+  flex-grow: 1;
+  margin: 0;
+  padding: 24px;
+  border-radius: 0 0 25px 25px;
+  gap: 10px;
+}
+
+.newscard__date {
+  max-width: 352px;
+  overflow: hidden;
+  font-family: Source Sans Pro;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(182, 188, 191, 1);
+}
+
+.newscard__title {
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 30px;
+  color: rgba(26, 27, 34, 1);
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+.newscard__text {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.375;
+  color: rgba(26, 27, 34, 1);
+  overflow: hidden;
+}
+
+.newscard__publisher {
+  font-family: "Roboto Slab", sans-serif;
+  margin-top: auto;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(182, 188, 191, 1);
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .newscard__bookmark-section {
+    right: 8px;
+    top: 8px;
+    gap: 3px;
+  }
+
+  .newscard__keyword-section {
+    left: 8px;
+    top: 8px;
+  }
+
+  .newscard__container {
+    max-width: 224px;
+  }
+
+  .newscard__info-container {
+    padding: 16px;
+  }
+
+  .newscard__info-date {
+    font-size: 16px;
+  }
+
+  .newscard__image {
+    height: 150px;
+  }
+
+  .newscard__info-title {
+    font-size: 14px;
+  }
+
+  .newscard__info-text {
+    line-height: 1.33;
+    height: 88px;
+    overflow: hidden;
+  }
+
+  .newscard__info-publisher {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .newscard__container {
+    max-width: 330px;
+  }
+
+  .newscard__image {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .newscard__container {
+    max-width: 290px;
+  }
+}
+
+@media screen and (max-width: 295px) {
+  .newscard__container {
+    max-width: 230px;
+  }
+
+  .newscard__image {
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 250px) {
+  .newscard__container {
+    max-width: 220px;
+  }
+}
+@media screen and (max-width: 235px) {
+  .newscard__container {
+    max-width: 200px;
+  }
+}

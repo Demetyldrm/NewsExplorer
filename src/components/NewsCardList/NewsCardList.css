@@ -1,0 +1,121 @@
+.newscardlist {
+  display: flex;
+  flex-direction: column;
+  align-items: flex;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: rgba(245, 246, 247, 1);
+}
+
+.newscardlist__result {
+  font-family: Roboto Slab;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 46px;
+  text-align: left;
+  padding-top: 80px;
+  padding-bottom: 64px;
+  margin-left: 104px;
+}
+
+.newscardlist__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  gap: 16px;
+  padding-bottom: 64px;
+}
+
+.newscardlist__button-show-more {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  border-radius: 80px;
+  background: #fff;
+  width: 288px;
+  height: 64px;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: #1a1b22;
+  text-align: center;
+  margin: 0 auto 80px auto;
+  transition: 0s linear 0.2s, opacity 0.2s linear;
+}
+
+.newscardlist__button-show-more:hover {
+  opacity: 0.9;
+  background: #e8e8e8;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  .newscardlist__title {
+    font-size: 18px;
+    padding-top: 40px;
+    padding-bottom: 32px;
+  }
+
+  .newscardlist__container {
+    max-width: 800px;
+    gap: 8px;
+    padding-bottom: 32px;
+  }
+
+  .newscardlist__button {
+    width: 240px;
+    height: 56px;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .newscardlist__title {
+    padding-bottom: 58px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .newscardlist__button {
+    margin-bottom: 24px;
+  }
+
+  .newscardlist__container {
+    padding-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 295px) {
+  .newscardlist__title {
+    padding-bottom: 40px;
+  }
+  .newscardlist__container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .newscardlist__button {
+    font-size: 16px;
+    margin-bottom: 20px;
+    width: 250px;
+    max-width: 250px;
+  }
+}
+
+@media screen and (max-width: 250px) {
+  .newscardlist__container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .newscardlist__button {
+    margin-bottom: 18px;
+    width: 190px;
+    max-width: 190px;
+  }
+}
