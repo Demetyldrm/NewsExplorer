@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/stage-1-frontend-api/static/css/main.4bfd4630.css",
+    "main.js": "/stage-1-frontend-api/static/js/main.ff690fbd.js",
+    "static/js/488.804d1c32.chunk.js": "/stage-1-frontend-api/static/js/488.804d1c32.chunk.js",
+    "static/media/backgroundImage.png": "/stage-1-frontend-api/static/media/backgroundImage.ab8dba5c6be45b7b3ec3.png",
+    "static/media/avatar.png": "/stage-1-frontend-api/static/media/avatar.ce6deacd63d8bbd29918.png",
+    "static/media/github.svg": "/stage-1-frontend-api/static/media/github.a6cad5fdaeca1130cc84.svg",
+    "index.html": "/stage-1-frontend-api/index.html",
+    "static/media/close-button.svg": "/stage-1-frontend-api/static/media/close-button.aacc59d193f3abc623e5.svg",
+    "static/media/linkedin2.svg": "/stage-1-frontend-api/static/media/linkedin2.ad2bc50daa565bb11ddb.svg",
+    "static/media/nothing-found.svg": "/stage-1-frontend-api/static/media/nothing-found.edeb321d7c4f4e5473eefe6d1dbf8f68.svg",
+    "static/media/delete-button-hover.svg": "/stage-1-frontend-api/static/media/delete-button-hover.71d41a94bc1e0880e311.svg",
+    "static/media/delete-button-normal.svg": "/stage-1-frontend-api/static/media/delete-button-normal.854dc7af986d298c7b2b.svg",
+    "static/media/logout-button-black.svg": "/stage-1-frontend-api/static/media/logout-button-black.4fb874ec404f25a00aed.svg",
+    "static/media/logout-button-white.svg": "/stage-1-frontend-api/static/media/logout-button-white.1f2ed6dd15f683177b3e.svg",
+    "static/media/bookmark-button-hover.svg": "/stage-1-frontend-api/static/media/bookmark-button-hover.7b206bf1a233cd5fa77f.svg",
+    "static/media/bookmark-button-normal.svg": "/stage-1-frontend-api/static/media/bookmark-button-normal.3d8c9b4d7a4e306af744.svg",
+    "static/media/bookmark-button-marked.svg": "/stage-1-frontend-api/static/media/bookmark-button-marked.8f4cd7583277ece5eec8.svg",
+    "main.4bfd4630.css.map": "/stage-1-frontend-api/static/css/main.4bfd4630.css.map",
+    "main.ff690fbd.js.map": "/stage-1-frontend-api/static/js/main.ff690fbd.js.map",
+    "488.804d1c32.chunk.js.map": "/stage-1-frontend-api/static/js/488.804d1c32.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4bfd4630.css",
+    "static/js/main.ff690fbd.js"
+  ]
+}
