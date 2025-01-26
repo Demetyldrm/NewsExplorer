@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/stage-1-frontend-api/static/css/main.c7d8b52f.css",
-    "main.js": "/stage-1-frontend-api/static/js/main.441a9f96.js",
+    "main.js": "/stage-1-frontend-api/static/js/main.84fbf4b4.js",
     "static/js/488.804d1c32.chunk.js": "/stage-1-frontend-api/static/js/488.804d1c32.chunk.js",
     "static/media/backgroundImage.png": "/stage-1-frontend-api/static/media/backgroundImage.ab8dba5c6be45b7b3ec3.png",
     "static/media/avatar.png": "/stage-1-frontend-api/static/media/avatar.ce6deacd63d8bbd29918.png",
@@ -18,11 +18,11 @@
     "static/media/bookmark-button-normal.svg": "/stage-1-frontend-api/static/media/bookmark-button-normal.3d8c9b4d7a4e306af744.svg",
     "static/media/bookmark-button-marked.svg": "/stage-1-frontend-api/static/media/bookmark-button-marked.8f4cd7583277ece5eec8.svg",
     "main.c7d8b52f.css.map": "/stage-1-frontend-api/static/css/main.c7d8b52f.css.map",
-    "main.441a9f96.js.map": "/stage-1-frontend-api/static/js/main.441a9f96.js.map",
+    "main.84fbf4b4.js.map": "/stage-1-frontend-api/static/js/main.84fbf4b4.js.map",
     "488.804d1c32.chunk.js.map": "/stage-1-frontend-api/static/js/488.804d1c32.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c7d8b52f.css",
-    "static/js/main.441a9f96.js"
+    "static/js/main.84fbf4b4.js"
   ]
 }
