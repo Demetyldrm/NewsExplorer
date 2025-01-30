@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
 import NewsCard from "../NewsCard/NewsCard";
-import NothingFound from "../NothingFound/NothingFound";
 import "./NewsCardList.css";
+import NothingFound from "../NothingFound/NothingFound";
+import { useSelector } from "react-redux";
+import { useLocation } from "react-router-dom";
 
 function NewsCardList({
   isLoggedIn,
@@ -10,55 +11,47 @@ function NewsCardList({
   isSearching,
   handleSignInModal,
 }) {
-  const [cardView, setCardView] = useState(3);
-  const handleSearchRes = () => setCardView(cardView + 3);
-
-  const news = useSelector((state) => state.articles.news);
+  let [cardView, setCardView] = useState(3);
+  const location = useLocation().pathname;
+  const allNews = useSelector((state) => state.articles.news);
   const savedNews = useSelector((state) => state.articles.savedNews);
 
-  const hasNoResults = !isPageLoading && isSearching && news.length === 0;
-  const hasSearchResults = !isPageLoading && isSearching && news.length >= 3;
-  const showMoreButton = cardView <= news.length;
+  // Show saved articles if on /saved-news, otherwise show search results
+  const news = location === "/saved-news" ? savedNews : allNews;
 
-  if (hasNoResults) {
-    return <NothingFound />;
-  }
+  console.log("Rendering NewsCardList. Showing:", news.length, "articles");
 
-  if (hasSearchResults) {
-    return (
-      <section className="newscardlist">
+  return !isPageLoading && isSearching && news.length === 0 ? (
+    <NothingFound />
+  ) : !isPageLoading && isSearching && news.length >= 1 ? (
+    <section className="newscardlist">
+      {location !== "/saved-news" && (
         <h2 className="newscardlist__result">Search results</h2>
-        <ul className="newscardlist__container">
-          {news.slice(0, cardView).map((newsItem, index) => {
-            const isSaved = savedNews.some(
-              (savedItem) => savedItem.link === newsItem.url
-            );
+      )}
 
-            return (
-              <NewsCard
-                key={index}
-                newsItem={newsItem}
-                isLoggedIn={isLoggedIn}
-                isSaved={isSaved}
-                handleSignInModal={handleSignInModal}
-              />
-            );
-          })}
-        </ul>
-        {showMoreButton && (
-          <button
-            className="newscardlist__button-show-more"
-            type="button"
-            onClick={handleSearchRes}
-          >
-            Show more
-          </button>
-        )}
-      </section>
-    );
-  }
+      <ul className="newscardlist__container">
+        {news.slice(0, cardView).map((newsItem, index) => (
+          <NewsCard
+            key={index}
+            newsItem={newsItem}
+            isLoggedIn={isLoggedIn}
+            isSaved={location === "/saved-news"}
+            handleSignInModal={handleSignInModal}
+          />
+        ))}
+      </ul>
 
-  return null;
+      {cardView <= news.length ? (
+        <button
+          className="newscardlist__button-show-more"
+          type="button"
+          onClick={() => setCardView(cardView + 3)}
+        >
+          Show more
+        </button>
+      ) : null}
+    </section>
+  ) : null;
 }
 
 export default NewsCardList;

@@ -41,7 +41,7 @@ function ModalWithForm({
             </button>
           </div>
         ) : (
-          <form className="modal__form" onSubmit={onSubmit}>
+          <form className="modal__form modal__form-signUp" onSubmit={onSubmit}>
             {children}
           </form>
         )}

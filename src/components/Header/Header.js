@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Navigation from "../Navigation/Navigation";
 import SearchBar from "../SearchBar/SearchBar";
 import "./Header.css";
@@ -9,6 +10,11 @@ function Header({
   onLogout,
   onSubmit,
 }) {
+  // Debugging: Log the current user to check if it's updating properly
+  useEffect(() => {
+    console.log("Current User in Header:", currentUser);
+  }, [currentUser]); // Logs every time currentUser updates
+
   return (
     <header className="header" id="header">
       <Navigation
@@ -18,7 +24,6 @@ function Header({
         onSignInModal={onSignInModal}
       />
 
-      {/* ✅ Wrap content inside a container to limit width */}
       <div className="header-content">
         <div className="header__container">
           <h1 className="header__title">What's going on in the world?</h1>

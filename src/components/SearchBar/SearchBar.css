@@ -2,9 +2,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; /* Ensures horizontal centering */
-  margin-top: 20px; /* Adds spacing between header and search */
-  width: 100%; /* Ensures full-width responsiveness */
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
 }
 
 .search__form-container {

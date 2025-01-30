@@ -1,48 +1,60 @@
 import React, { useState } from "react";
 import { formatSearchResDate } from "../../utils/helper";
 import { useLocation } from "react-router-dom";
-import {
-  unsaveArticle,
-  saveArticle,
-  removeSavedArticle,
-} from "../../store/newsSlice";
+import { useDispatch } from "react-redux";
+import { saveArticle, removeSavedArticle } from "../../store/newsSlice";
 import "./NewsCard.css";
+import blueBookmark from "../../images/blueBookmark.svg";
+import bookmarkIcon from "../../images/bookmark-button-normal.svg";
+import { useSelector } from "react-redux";
+function NewsCard({
+  isLoggedIn,
+  newsItem,
+  isSaved,
 
-function NewsCard({ isLoggedIn, newsItem, isSaved, handleSignInModal }) {
+  handleSignInModal,
+}) {
   const formattedDate = formatSearchResDate(
     newsItem.publishedAt || newsItem.date
   );
   const [showIcon, setShowIcon] = useState(false);
+  const [saved, setSaved] = useState(isSaved);
   const location = useLocation().pathname;
+  const dispatch = useDispatch();
+
   const handleShowIcon = () => setShowIcon(true);
   const handleHideIcon = () => setShowIcon(false);
+  const searchKeyword = useSelector((state) => state.search?.searchTerm || "");
   const handleSaveClick = () => {
+    console.log("🔹 Attempting to save article");
+    console.log("🔍 searchKeyword before saving:", searchKeyword);
+    console.log("🔍 newsItem before saving:", newsItem);
+
     if (isLoggedIn) {
-      isSaved
-        ? unsaveArticle(newsItem)
-        : saveArticle(newsItem, newsItem.keyword);
+      dispatch(saveArticle({ newsItem, searchKeyword })); // ✅ Ensure the search term is included
+      setSaved(!saved);
     } else {
       handleSignInModal();
     }
   };
-  const handleDeleteClick = () => removeSavedArticle(newsItem);
-
+  const handleDeleteClick = () => {
+    console.log("Deleting article:", newsItem);
+    dispatch(removeSavedArticle(newsItem));
+  };
   return (
     <article className="newscard__container">
-      {isLoggedIn && location === "/saved-news" ? (
+      {isLoggedIn && location === "/saved-news" && (
         <div className="newscard__keyword">{newsItem.keyword}</div>
-      ) : (
-        ""
       )}
+
       <div className="newscard__bookmark">
-        {!isLoggedIn && !isSaved && showIcon ? (
+        {!isLoggedIn && !saved && showIcon ? (
           <p className="newscard__bookmark-message">Sign in to save articles</p>
-        ) : (isSaved && isLoggedIn && showIcon) ||
+        ) : (saved && isLoggedIn && showIcon) ||
           (location === "/saved-news" && showIcon) ? (
           <p className="newscard__bookmark-message">Remove from saved</p>
-        ) : (
-          ""
-        )}
+        ) : null}
+
         {isLoggedIn && location === "/saved-news" ? (
           <button
             className="newscard__delete-button"
@@ -52,22 +64,26 @@ function NewsCard({ isLoggedIn, newsItem, isSaved, handleSignInModal }) {
           ></button>
         ) : (
           <button
-            className={
-              isSaved
-                ? "newscard__bookmark-button-active"
-                : "newscard__bookmark-button"
-            }
+            className={`newscard__bookmark-button ${
+              saved ? "newscard__bookmark-button-active" : ""
+            }`}
             onMouseOver={handleShowIcon}
             onMouseOut={handleHideIcon}
             onClick={handleSaveClick}
+            style={{
+              backgroundImage: `url(${saved ? blueBookmark : bookmarkIcon})`,
+              backgroundColor: saved ? "##fff" : "#fff",
+            }}
           ></button>
         )}
       </div>
+
       <img
         className="newscard__image"
         src={newsItem.urlToImage || newsItem.image}
-        alt={newsItem.description}
+        alt={newsItem.title || "News image"}
       />
+
       <div className="newscard__info-container">
         <p className="newscard__date">{formattedDate}</p>
         <h3 className="newscard__title">{newsItem.title}</h3>
@@ -75,7 +91,7 @@ function NewsCard({ isLoggedIn, newsItem, isSaved, handleSignInModal }) {
           {newsItem.description || newsItem.text}
         </p>
         <p className="newscard__publisher">
-          {newsItem.source.name || newsItem.name}
+          {newsItem.source?.name || newsItem.name}
         </p>
       </div>
     </article>

@@ -1,26 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-
 import "./Navigation.css";
 
-function Navigation({ isLoggedIn, onSignInModal, onLogout }) {
+function Navigation({ isLoggedIn, currentUser, onSignInModal, onLogout }) {
   const reactLocation = useLocation();
   const currentLocation = reactLocation.pathname;
-  const currentUser = { userId: "1", name: "Demet" };
+
+  useEffect(() => {
+    console.log("Current User in Navigation:", currentUser);
+  }, [currentLocation, currentUser]);
 
   return (
     <nav className="nav">
       <div className="nav__left-container">
         <Link to="/" className="nav__logo-link">
           <h2
-            className="nav__logo"
-            onClick={() => console.log("Logo clicked!")}
-            style={{ cursor: "pointer" }}
+            className={`nav__logo ${
+              currentLocation === "/saved-news" ? "nav__logo-saved-news" : ""
+            }`}
           >
             NewsExplorer
           </h2>
         </Link>
       </div>
+
       <div className="nav__right-container">
         <ul className="nav__container-links">
           <li>
@@ -36,6 +39,7 @@ function Navigation({ isLoggedIn, onSignInModal, onLogout }) {
               </button>
             </Link>
           </li>
+
           {isLoggedIn && (
             <li>
               <Link to="/saved-news">
@@ -51,23 +55,24 @@ function Navigation({ isLoggedIn, onSignInModal, onLogout }) {
               </Link>
             </li>
           )}
+
           {isLoggedIn ? (
             <li>
               <button
-                className={
-                  currentLocation === "/"
-                    ? "nav__btn-logout"
-                    : "nav__btn-logout-saved-news"
-                }
+                className={`nav__btn-logout ${
+                  currentLocation === "/saved-news"
+                    ? "nav__btn-logout-saved-news"
+                    : ""
+                }`}
                 onClick={onLogout}
               >
-                {currentUser ? currentUser.name : ""}
+                {currentUser?.name || "User"}
               </button>
             </li>
           ) : (
             <li>
               <button
-                className=" modal__open nav__btn-signIn"
+                className="modal__open nav__btn-signIn"
                 onClick={onSignInModal}
               >
                 Sign in

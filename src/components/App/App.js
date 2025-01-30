@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+
 import "./App.css";
 import Header from "../Header/Header";
 import SavedNews from "../SavedNewsPage/SavedNews.js";
@@ -10,6 +13,7 @@ import SignUpModal from "../SignUpModal/SignUpModal";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 import { useDispatch } from "react-redux";
+import { reloadSavedArticles } from "../../store/newsSlice";
 
 import {
   getNewsByDateAndKeyword,
@@ -19,6 +23,7 @@ import { signUp, authorize } from "../../utils/auth.js";
 
 function App() {
   const dispatch = useDispatch();
+  const location = useLocation();
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
@@ -28,6 +33,7 @@ function App() {
   const [serverErrors, setServerErrors] = useState("");
   const [isModalLoading, setIsModalLoading] = useState(false);
   const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false); // ✅ NEW: Success modal state
+  const navigate = useNavigate();
 
   const handleCloseModal = () => {
     setActiveModal(null); // Close all modals
@@ -62,7 +68,7 @@ function App() {
     try {
       const response = await authorize(values.email, values.password);
       setIsLoggedIn(true);
-      setCurrentUser({ name: "Fake User", email: values.email }); // Simulate user
+      setCurrentUser({ name: values.name, email: values.email }); // Simulate user
       setActiveModal(null); // Close modal
     } catch (error) {
       setServerErrors("Invalid email or password");
@@ -72,6 +78,18 @@ function App() {
   const handleSignInFromSuccess = () => {
     setIsSuccessModalOpen(false); // Close success modal
     setActiveModal("signIn"); // Open Sign-In modal
+  };
+
+  const handleLogout = () => {
+    console.log("Logging out user...");
+
+    setIsLoggedIn(false);
+    setCurrentUser(null);
+
+    dispatch({ type: "news/clearSavedArticles" });
+    localStorage.removeItem("savedNews");
+
+    navigate("/");
   };
 
   const handleNewsArticleSearch = (keyword) => {
@@ -84,16 +102,11 @@ function App() {
   };
 
   useEffect(() => {
-    if (isLoggedIn) {
-      dispatch(getSavedArticles())
-        .unwrap()
-        .catch(() => setServerErrors("Error fetching saved articles"));
-    }
-  }, [isLoggedIn, dispatch]);
+    dispatch(reloadSavedArticles());
+  }, [dispatch]);
 
   useEffect(() => {
     function handleCloseMethods(evt) {
-      // Close the modal when "Escape" key is pressed
       if (evt.key === "Escape") {
         handleCloseModal();
       }
@@ -118,13 +131,16 @@ function App() {
 
   return (
     <div className="page">
-      <Header
-        isLoggedIn={isLoggedIn}
-        currentUser={currentUser}
-        onSignInModal={() => setActiveModal("signIn")}
-        onSignUpModal={() => setActiveModal("signUp")}
-        onSubmit={handleNewsArticleSearch}
-      />
+      {location.pathname !== "/saved-news" && (
+        <Header
+          isLoggedIn={isLoggedIn}
+          currentUser={currentUser}
+          onSignInModal={() => setActiveModal("signIn")}
+          onSignUpModal={() => setActiveModal("signUp")}
+          onLogout={handleLogout}
+          onSubmit={handleNewsArticleSearch}
+        />
+      )}
 
       <Routes>
         <Route

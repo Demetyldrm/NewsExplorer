@@ -6,13 +6,14 @@
   top: 32px;
   font-family: "Roboto", sans-serif;
   text-align: center;
-  font-size: 0.75rem;
+  font-size: 14px;
   font-weight: 500;
-  color: #000;
   overflow: hidden;
+  color: #000000;
+  /* z-index: 10 !important; */
   background-color: #fff;
-  padding: 13px 15px;
   border-radius: 8px;
+  padding: 13px 15px;
 }
 
 .newscard__bookmark {
@@ -25,14 +26,21 @@
 }
 
 .newscard__bookmark-button {
-  background: no-repeat url("../../images/bookmark-button-normal.svg") #fff;
-  background-position: center;
-  background-size: cover;
   width: 40px;
   height: 40px;
   border-radius: 8px;
   cursor: pointer;
   border: none;
+  background-color: transparent;
+  background-image: url("../../images/bookmark-button-normal.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+}
+
+.newscard__bookmark-button:hover {
+  background-image: url("../../images/bookmark-button-hover.svg");
+  background-size: 80%;
 }
 
 .newscard__bookmark-message {
@@ -47,6 +55,7 @@
   padding: 13px 15px;
   border-radius: 8px;
   color: #000;
+  transition: background 0.3s ease-in-out;
 }
 
 .newscard__bookmark-button:hover {
@@ -54,14 +63,16 @@
 }
 
 .newscard__bookmark-button-active {
-  background: no-repeat url("../../images/bookmark-button-marked.svg") #fff;
+  background: no-repeat url("../../images/blueBookmark.svg") #fff;
   background-position: center;
   background-size: cover;
+
   width: 40px;
   height: 40px;
   cursor: pointer;
   border: none;
   border-radius: 8px;
+  transition: background 0.3s ease-in-out;
 }
 
 .newscard__delete-button {

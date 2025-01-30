@@ -2,8 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: calc(10% - 40px);
-  padding-right: calc(10% - 40px);
+  padding-left: 104px;
+  padding-right: 104px;
   height: 80px;
   margin: 0;
   border-bottom: 1px solid rgba(196, 196, 196, 0.3);
@@ -11,22 +11,22 @@
 
 .nav__logo {
   font-family: "Roboto Slab", sans-serif;
-  font-size: 1.5rem;
+  font-size: 20px;
   font-weight: 700;
-  line-height: 1.2;
-  color: white;
+  line-height: 24px;
+  color: #ffffff;
   margin: 0;
   border-bottom: 3px solid transparent;
 }
+.nav__logo-active {
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
 
 .nav__logo-saved-news {
-  font-family: "Roboto Slab", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.2;
-  color: #1a1b22;
-  margin: 0;
-  border-bottom: 3px solid transparent;
+  color: #1a1b22 !important;
 }
 
 .nav__container-links {
@@ -43,9 +43,9 @@
 
 .nav__btn {
   font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 1.2rem;
-  line-height: 1.2;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
   background: none;
   border: none;
   cursor: pointer;
@@ -56,9 +56,9 @@
 
 .nav__btn-saved-news {
   font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 1.2rem;
-  line-height: 1.2;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
   background: none;
   border: none;
   cursor: pointer;
@@ -68,13 +68,21 @@
 }
 
 .nav__btn-active {
+  font-family: "Roboto", sans-serif;
   border-bottom: 2px solid white;
   height: 80px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 .nav__btn-active-saved-news {
   border-bottom: 2px solid black;
+  font-family: "Roboto", sans-serif;
   height: 80px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 .nav__btn-signIn {
@@ -97,11 +105,17 @@
   margin-bottom: 2px;
 }
 
+.nav__btn-active-saved-news {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+
 .nav__btn-logout {
   font-family: "Roboto", sans-serif;
-  font-size: 1.125rem;
-  font-weight: 700;
-  line-height: 1.2;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
   background-color: transparent;
   padding: 12px 54px 12px 19px;
   border-radius: 100px;
@@ -116,14 +130,31 @@
 
 .nav__btn-logout-saved-news {
   font-family: "Roboto", sans-serif;
-  font-size: 1.125rem;
-  font-weight: 700;
-  line-height: 1.2;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
   background-color: transparent;
   padding: 12px 54px 12px 19px;
   border-radius: 100px;
   cursor: pointer;
-  color: black;
+  color: black; /* ✅ Change text color to black */
+  background-image: url(../../images/logout-button-black.svg);
+  border: 1px solid #1a1b22;
+  background-repeat: no-repeat;
+  background-position: center right 15px;
+  margin-bottom: 2px;
+}
+
+.nav__btn-logout-saved-news {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  background-color: transparent;
+  padding: 12px 54px 12px 19px;
+  border-radius: 100px;
+  cursor: pointer;
+  color: black; /* ✅ Change text color to black */
   background-image: url(../../images/logout-button-black.svg);
   border: 1px solid #1a1b22;
   background-repeat: no-repeat;
