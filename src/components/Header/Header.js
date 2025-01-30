@@ -10,7 +10,6 @@ function Header({
   onLogout,
   onSubmit,
 }) {
-  // Debugging: Log the current user to check if it's updating properly
   useEffect(() => {
     console.log("Current User in Header:", currentUser);
   }, [currentUser]); // Logs every time currentUser updates

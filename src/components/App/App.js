@@ -32,7 +32,7 @@ function App() {
   const [isSearching, setIsSearching] = useState(false);
   const [serverErrors, setServerErrors] = useState("");
   const [isModalLoading, setIsModalLoading] = useState(false);
-  const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false); // ✅ NEW: Success modal state
+  const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
   const navigate = useNavigate();
 
   const handleCloseModal = () => {
