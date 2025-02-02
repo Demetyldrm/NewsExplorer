@@ -73,6 +73,10 @@
     height: 56px;
     margin-bottom: 40px;
   }
+
+  .newscardlist__result {
+    margin: 36px 16px 58px 30px;
+  }
 }
 
 @media screen and (max-width: 480px) {
