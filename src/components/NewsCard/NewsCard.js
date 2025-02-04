@@ -42,59 +42,63 @@ function NewsCard({
     dispatch(removeSavedArticle(newsItem));
   };
   return (
-    <article className="newscard__container">
-      {isLoggedIn && location === "/saved-news" && (
-        <div className="newscard__keyword">{newsItem.keyword}</div>
-      )}
-
-      <div className="newscard__bookmark">
-        {!isLoggedIn && !saved && showIcon ? (
-          <p className="newscard__bookmark-message">Sign in to save articles</p>
-        ) : (saved && isLoggedIn && showIcon) ||
-          (location === "/saved-news" && showIcon) ? (
-          <p className="newscard__bookmark-message">Remove from saved</p>
-        ) : null}
-
-        {isLoggedIn && location === "/saved-news" ? (
-          <button
-            className="newscard__delete-button"
-            onMouseOver={handleShowIcon}
-            onMouseOut={handleHideIcon}
-            onClick={handleDeleteClick}
-          ></button>
-        ) : (
-          <button
-            className={`newscard__bookmark-button ${
-              saved ? "newscard__bookmark-button-active" : ""
-            }`}
-            onMouseOver={handleShowIcon}
-            onMouseOut={handleHideIcon}
-            onClick={handleSaveClick}
-            style={{
-              backgroundImage: `url(${saved ? blueBookmark : bookmarkIcon})`,
-              backgroundColor: saved ? "##fff" : "#fff",
-            }}
-          ></button>
+    <li className="newscard__container">
+      <article className="newscard">
+        {isLoggedIn && location === "/saved-news" && (
+          <div className="newscard__keyword">{newsItem.keyword}</div>
         )}
-      </div>
 
-      <img
-        className="newscard__image"
-        src={newsItem.urlToImage || newsItem.image}
-        alt={newsItem.title || "News image"}
-      />
+        <div className="newscard__bookmark">
+          {!isLoggedIn && !saved && showIcon ? (
+            <p className="newscard__bookmark-message">
+              Sign in to save articles
+            </p>
+          ) : (saved && isLoggedIn && showIcon) ||
+            (location === "/saved-news" && showIcon) ? (
+            <p className="newscard__bookmark-message">Remove from saved</p>
+          ) : null}
 
-      <div className="newscard__info-container">
-        <p className="newscard__date">{formattedDate}</p>
-        <h3 className="newscard__title">{newsItem.title}</h3>
-        <p className="newscard__text">
-          {newsItem.description || newsItem.text}
-        </p>
-        <p className="newscard__publisher">
-          {newsItem.source?.name || newsItem.name}
-        </p>
-      </div>
-    </article>
+          {isLoggedIn && location === "/saved-news" ? (
+            <button
+              className="newscard__delete-button"
+              onMouseOver={handleShowIcon}
+              onMouseOut={handleHideIcon}
+              onClick={handleDeleteClick}
+            ></button>
+          ) : (
+            <button
+              className={`newscard__bookmark-button ${
+                saved ? "newscard__bookmark-button-active" : ""
+              }`}
+              onMouseOver={handleShowIcon}
+              onMouseOut={handleHideIcon}
+              onClick={handleSaveClick}
+              style={{
+                backgroundImage: `url(${saved ? blueBookmark : bookmarkIcon})`,
+                backgroundColor: saved ? "##fff" : "#fff",
+              }}
+            ></button>
+          )}
+        </div>
+
+        <img
+          className="newscard__image"
+          src={newsItem.urlToImage || newsItem.image}
+          alt={newsItem.title || "News image"}
+        />
+
+        <div className="newscard__info-container">
+          <p className="newscard__date">{formattedDate}</p>
+          <h3 className="newscard__title">{newsItem.title}</h3>
+          <p className="newscard__text">
+            {newsItem.description || newsItem.text}
+          </p>
+          <p className="newscard__publisher">
+            {newsItem.source?.name || newsItem.name}
+          </p>
+        </div>
+      </article>
+    </li>
   );
 }
 

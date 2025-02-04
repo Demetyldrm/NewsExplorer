@@ -31,7 +31,9 @@
 
 .modal__content {
   position: relative;
-  width: 430px;
+  width: min(90vw, 430px); /* Ensures it doesn’t exceed 90% of viewport width */
+  max-width: 90%;
+  padding: 24px;
   background-color: #fff;
   border-radius: 16px;
   display: flex;
@@ -96,7 +98,9 @@
 }
 
 .modal_button-signUp {
-  width: 360px;
+  width: 100%;
+  max-width: 360px;
+  padding: 16px;
   height: 64px;
   border-radius: 100px;
   top: 459px;
@@ -116,9 +120,9 @@
 }
 
 .modal_button-signIn {
-  width: 360px;
-  height: 64px;
-  border-radius: 100px;
+  width: 100%;
+  max-width: 360px;
+  height: 56px;
   top: 459px;
   left: 540px;
   gap: 0px;
@@ -291,10 +295,11 @@
   }
 
   .modal__content {
-    max-width: 520px;
-    padding: 20px 16px 16px 16px;
-    height: 560px;
-    justify-content: flex-start;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 16px 16px 16px 16px;
+    padding: 20px;
+    height: auto;
   }
 
   .modal__submit-button {

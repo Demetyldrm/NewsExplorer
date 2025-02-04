@@ -43,7 +43,15 @@ function Navigation({ isLoggedIn, currentUser, onSignInModal, onLogout }) {
         <ul className="nav__container-links">
           <li className="nav__item">
             <Link to="/" onClick={() => setMenuOpen(false)}>
-              <button className="nav__button nav__button-action">Home</button>
+              <button
+                className={`nav__button nav__button-action ${
+                  currentLocation === "/saved-news"
+                    ? "saved-news nav__btn-active-saved-news"
+                    : ""
+                }`}
+              >
+                Home
+              </button>
             </Link>
           </li>
 

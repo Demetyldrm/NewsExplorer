@@ -1,3 +1,18 @@
+.newscard__container {
+  max-width: 290px;
+  list-style: none;
+  margin: 0 auto;
+}
+
+.newscard {
+  width: 100%;
+  max-width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .newscard__keyword {
   position: absolute;
   max-height: 40px;
@@ -211,8 +226,18 @@
 }
 
 @media screen and (max-width: 425px) {
+  .newscard {
+    width: 100%;
+    max-width: 100%;
+  }
   .newscard__container {
     max-width: 290px;
+  }
+
+  .newscard__info-container {
+    max-width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
   }
 }
 

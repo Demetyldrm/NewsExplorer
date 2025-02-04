@@ -104,7 +104,7 @@
   }
 
   .header__subtitle {
-    font-family: Roboto slab;
+    font-family: "Roboto", sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
@@ -116,28 +116,41 @@
 }
 @media screen and (max-width: 480px) {
   .header {
-    height: 536px;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
     width: 100vw;
-    max-width: 320px;
+    max-width: 100%;
     padding: 0;
-    overflow: visible;
-  }
-
-  .header__container {
-    max-width: 320px;
     margin: 0 auto;
+    overflow: hidden;
   }
-
-  .header__title {
-    font-size: 32px;
-    padding: 30px 19px 10px 16px;
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
   }
 
+  .header__container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  .header__title {
+    font-size: 28px;
+    padding: 20px 16px 10px 16px;
+    text-align: center;
+    line-height: 34px;
+    margin-bottom: 16px;
+  }
+
   .header__subtitle {
-    font-size: 16px;
-    margin-left: 16px;
-    margin-right: 16px;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 16px 122px;
     text-align: center;
   }
 }
