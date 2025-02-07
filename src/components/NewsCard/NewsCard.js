@@ -80,20 +80,20 @@ function NewsCard({
             ></button>
           )}
         </div>
-
-        <img
-          className="newscard__image"
-          src={newsItem.urlToImage || newsItem.image}
-          alt={newsItem.title || "News image"}
-        />
-
+        <div className="newscard__image-container">
+          <img
+            className="newscard__image"
+            src={newsItem.urlToImage || newsItem.image}
+            alt={newsItem.title || "News image"}
+          />
+        </div>
         <div className="newscard__info-container">
-          <p className="newscard__date">{formattedDate}</p>
-          <h3 className="newscard__title">{newsItem.title}</h3>
-          <p className="newscard__text">
+          <p className="newscard__info-date">{formattedDate}</p>
+          <h3 className="newscard__info-title">{newsItem.title}</h3>
+          <p className="newscard__info-text">
             {newsItem.description || newsItem.text}
           </p>
-          <p className="newscard__publisher">
+          <p className="newscard__info-publisher">
             {newsItem.source?.name || newsItem.name}
           </p>
         </div>

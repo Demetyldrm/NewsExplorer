@@ -11,6 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.page {
+  background-color: rgba(245, 246, 247, 1);
+}
 
 a {
   text-decoration: none;
@@ -20,4 +23,6 @@ a {
 html,
 body {
   width: 100%;
+  max-width: 100%;
+  /* overflow-x: hidden; */
 }

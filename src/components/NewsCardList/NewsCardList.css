@@ -1,10 +1,11 @@
 .newscardlist {
   display: flex;
   flex-direction: column;
-  align-items: flex;
+  align-items: center;
   justify-content: center;
   margin: 0 auto;
-  background-color: rgba(245, 246, 247, 1);
+  width: 100%;
+  max-width: 1440px;
 }
 
 .newscardlist__result {
@@ -20,17 +21,17 @@
 
 .newscardlist__container {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   flex-wrap: wrap;
-  max-width: 1440px;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
-  padding-left: 16px;
-  padding-right: 16px;
-  gap: 16px;
-  padding-bottom: 64px;
+  padding: 0 16px;
 }
 
+.newscard {
+  margin: 8px;
+}
 .newscardlist__button-show-more {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
@@ -45,7 +46,7 @@
   padding: 0;
   color: #1a1b22;
   text-align: center;
-  margin: 0 auto 80px auto;
+  margin: 56px auto 80px auto;
   transition: 0s linear 0.2s, opacity 0.2s linear;
 }
 
@@ -63,9 +64,10 @@
   }
 
   .newscardlist__container {
-    max-width: 800px;
-    gap: 8px;
-    padding-bottom: 32px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2px;
+    row-gap: 2px;
   }
 
   .newscardlist__button {
@@ -91,7 +93,13 @@
   }
 
   .newscardlist__container {
-    padding-bottom: 16px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 0px;
+    row-gap: 16px;
+    justify-content: center;
+    max-width: 100%;
+    padding: 0 10px;
   }
 }
 
@@ -99,10 +107,7 @@
   .newscardlist__title {
     padding-bottom: 40px;
   }
-  .newscardlist__container {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+
   .newscardlist__button {
     font-size: 16px;
     margin-bottom: 20px;
@@ -121,5 +126,17 @@
     margin-bottom: 18px;
     width: 190px;
     max-width: 190px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .newscardlist__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 16px;
+    row-gap: 24px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
   }
 }

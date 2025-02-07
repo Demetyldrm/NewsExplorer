@@ -10,10 +10,12 @@
   background-position: center;
   overflow: hidden;
   height: 576px;
+  width: 100vw;
   max-width: 100%;
-  /* min-height: 600px; */
-
-  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
   color: white;
 }
 
@@ -58,7 +60,6 @@
 @media screen and (max-width: 1024px) {
   .header {
     height: 500px;
-    text-align: center;
     padding: 0;
   }
 

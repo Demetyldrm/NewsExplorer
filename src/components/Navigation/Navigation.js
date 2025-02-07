@@ -45,8 +45,10 @@ function Navigation({ isLoggedIn, currentUser, onSignInModal, onLogout }) {
             <Link to="/" onClick={() => setMenuOpen(false)}>
               <button
                 className={`nav__button nav__button-action ${
-                  currentLocation === "/saved-news"
-                    ? "saved-news nav__btn-active-saved-news"
+                  currentLocation === "/"
+                    ? isLoggedIn
+                      ? "nav__btn-active-home"
+                      : "nav__btn-active-home-saved"
                     : ""
                 }`}
               >
