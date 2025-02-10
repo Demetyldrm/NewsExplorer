@@ -36,12 +36,12 @@ function App() {
   const navigate = useNavigate();
 
   const handleCloseModal = () => {
-    setActiveModal(null); // Close all modals
-    setIsSuccessModalOpen(false); // Close success modal too
+    setActiveModal(null);
+    setIsSuccessModalOpen(false);
   };
 
   const handleSignInModal = () => {
-    console.log("handleSignInModal triggered");
+    console.log("Sign-in button clicked - Opening modal");
     setActiveModal("signIn");
   };
 
@@ -52,10 +52,10 @@ function App() {
         values.password,
         values.username
       );
-      setCurrentUser(response.data); // Store fake user in state
+      setCurrentUser(response.data);
       setIsLoggedIn(true);
-      setActiveModal(null); // Close modal
-      // Open the success modal after successful signup
+      setActiveModal(null);
+
       setTimeout(() => {
         setIsSuccessModalOpen(true);
       }, 300);
@@ -68,16 +68,16 @@ function App() {
     try {
       const response = await authorize(values.email, values.password);
       setIsLoggedIn(true);
-      setCurrentUser({ name: values.name, email: values.email }); // Simulate user
-      setActiveModal(null); // Close modal
+      setCurrentUser({ name: values.name, email: values.email });
+      setActiveModal(null);
     } catch (error) {
       setServerErrors("Invalid email or password");
     }
   };
 
   const handleSignInFromSuccess = () => {
-    setIsSuccessModalOpen(false); // Close success modal
-    setActiveModal("signIn"); // Open Sign-In modal
+    setIsSuccessModalOpen(false);
+    setActiveModal("signIn");
   };
 
   const handleLogout = () => {

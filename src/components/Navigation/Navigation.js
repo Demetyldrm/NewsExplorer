@@ -29,10 +29,11 @@ function Navigation({ isLoggedIn, currentUser, onSignInModal, onLogout }) {
       </div>
       {/* Mobile Menu Button */}
       <button
-        className={`nav__menu-icon ${
-          isLoggedIn ? "nav__menu-icon-saved-news" : ""
-        } ${menuOpen ? "open" : ""}`}
-        onClick={() => setMenuOpen(!menuOpen)}
+        className={`nav__menu-icon ${menuOpen ? "open" : ""}`}
+        onClick={(e) => {
+          e.stopPropagation();
+          setMenuOpen(!menuOpen);
+        }}
       >
         <span></span>
         <span></span>
@@ -46,10 +47,8 @@ function Navigation({ isLoggedIn, currentUser, onSignInModal, onLogout }) {
               <button
                 className={`nav__button nav__button-action ${
                   currentLocation === "/"
-                    ? isLoggedIn
-                      ? "nav__btn-active-home"
-                      : "nav__btn-active-home-saved"
-                    : ""
+                    ? "nav__btn-active-home"
+                    : "nav__btn-active-home-saved"
                 }`}
               >
                 Home
@@ -73,10 +72,15 @@ function Navigation({ isLoggedIn, currentUser, onSignInModal, onLogout }) {
             </li>
           )}
 
-          {/* Show Sign In button inside the menu for non-logged-in users */}
           {!isLoggedIn && (
             <li>
-              <button className="nav__menu-signin-btn" onClick={onSignInModal}>
+              <button
+                className="nav__menu-signin-btn"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onSignInModal();
+                }}
+              >
                 Sign in
               </button>
             </li>
