@@ -176,7 +176,7 @@
 }
 
 .newscard__info-publisher {
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: auto 24px 24px 0px;
   font-weight: 700;
   font-size: 16px;
@@ -337,10 +337,11 @@
     white-space: normal;
     max-height: none;
     display: -webkit-box;
-    overflow: hidden;
-    text-overflow: ellipsis;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: auto;
+    text-overflow: ellipsis;
     max-height: none;
   }
 
@@ -354,11 +355,11 @@
     white-space: normal;
     max-height: none;
     display: -webkit-box;
-    overflow: hidden;
-    text-overflow: ellipsis;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+    overflow: hidden;
     margin-bottom: auto;
+    text-overflow: ellipsis;
   }
   .newscard__info-date {
     margin-top: 16px;
@@ -376,7 +377,6 @@
   }
 
   .newscard__image {
-    /* width: 208px; */
     height: 100%;
     border-radius: 25px 25px 0 0;
   }

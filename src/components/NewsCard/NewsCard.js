@@ -31,7 +31,7 @@ function NewsCard({
     console.log("🔍 newsItem before saving:", newsItem);
 
     if (isLoggedIn) {
-      dispatch(saveArticle({ newsItem, searchKeyword })); // ✅ Ensure the search term is included
+      dispatch(saveArticle({ newsItem, searchKeyword }));
       setSaved(!saved);
     } else {
       handleSignInModal();

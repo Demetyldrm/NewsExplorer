@@ -10,7 +10,6 @@
   background-position: center;
   overflow: hidden;
   height: 576px;
-  /* width: 100vw; */
   max-width: 100%;
   overflow: hidden;
   margin: 0 auto;
@@ -90,7 +89,7 @@
   .header-content {
     max-width: 450px;
   }
-  */ .header__container {
+  .header__container {
     margin: 0 !important;
   }
 

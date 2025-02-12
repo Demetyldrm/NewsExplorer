@@ -27,7 +27,7 @@ function Navigation({ isLoggedIn, currentUser, onSignInModal, onLogout }) {
           </h2>
         </Link>
       </div>
-      {/* Mobile Menu Button */}
+
       <button
         className={`nav__menu-icon ${menuOpen ? "open" : ""}`}
         onClick={(e) => {
@@ -39,7 +39,6 @@ function Navigation({ isLoggedIn, currentUser, onSignInModal, onLogout }) {
         <span></span>
       </button>
 
-      {/* Navigation Links (Desktop & Mobile) */}
       <div className={`nav__right-container ${menuOpen ? "nav__open" : ""}`}>
         <ul className="nav__container-links">
           <li className="nav__item">

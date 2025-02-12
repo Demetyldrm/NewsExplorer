@@ -2,12 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding-left: 40px;
-  padding-right: 40px; */
+
   height: 80px;
   margin: 0 auto;
   border-bottom: 1px solid rgba(196, 196, 196, 0.3);
-  /* max-width: 1020px; */
 }
 
 .nav__left-container {
@@ -448,7 +446,7 @@
     color: white;
     border: 1px solid white;
     border-radius: 25px;
-    /* padding: 14px 24px; */
+
     max-width: 288px;
     height: 56px;
     width: 100vh;

@@ -17,9 +17,9 @@
 .modal__content-success {
   width: 430px;
   height: 182px;
-  border-radius: 16px; /* Match Figma */
+  border-radius: 16px;
   background-color: #fff;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,7 +30,7 @@
 
 .modal__content {
   position: relative;
-  width: min(90vw, 430px); /* Ensures it doesn’t exceed 90% of viewport width */
+  width: min(90vw, 430px);
   max-width: 90%;
   padding: 24px;
   background-color: #fff;

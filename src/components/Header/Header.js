@@ -12,8 +12,7 @@ function Header({
 }) {
   useEffect(() => {
     console.log("Current User in Header:", currentUser);
-  }, [currentUser]); // Logs every time currentUser updates
-
+  }, [currentUser]);
   return (
     <header className="header" id="header">
       <Navigation
