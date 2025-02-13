@@ -1,6 +1,7 @@
 .saved-news-header {
   margin-top: 20px;
   text-align: left;
+  max-width: 1440px;
 }
 
 .saved-news-header__title {

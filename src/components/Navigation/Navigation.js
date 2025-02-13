@@ -29,7 +29,9 @@ function Navigation({ isLoggedIn, currentUser, onSignInModal, onLogout }) {
       </div>
 
       <button
-        className={`nav__menu-icon ${menuOpen ? "open" : ""}`}
+        className={`nav__menu-icon ${menuOpen ? "open" : ""} ${
+          currentLocation === "/saved-news" ? "saved-news" : ""
+        }`}
         onClick={(e) => {
           e.stopPropagation();
           setMenuOpen(!menuOpen);

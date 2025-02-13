@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  max-width: 1440px;
 }
 
 .newscardlist__result {
@@ -26,9 +27,6 @@
   padding: 0 16px;
 }
 
-.newscard {
-  margin: 8px;
-}
 .newscardlist__button-show-more {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
@@ -90,11 +88,12 @@
   }
 
   .newscardlist__container {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    column-gap: 0px;
+    max-width: 288px;
+    padding: 0;
     justify-content: center;
-    max-width: 100%;
   }
 }
 
@@ -126,10 +125,10 @@
 @media screen and (min-width: 1024px) {
   .newscardlist__container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 16px;
-    row-gap: 24px;
+    grid-template-columns: repeat(3, minmax(320px, 320px));
+    column-gap: 8px;
+    row-gap: 8px;
     margin: 0 auto;
-    margin: 0;
+    justify-content: center;
   }
 }
