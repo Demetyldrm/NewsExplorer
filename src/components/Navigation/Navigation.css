@@ -358,6 +358,7 @@
     border: none;
     cursor: pointer;
     padding: 0;
+    margin-left: 15px;
   }
 
   .nav__container-links {
@@ -368,8 +369,28 @@
     padding: 0 !important;
     opacity: 1 !important;
     visibility: visible !important;
-    z-index: 2000 !important;
-    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    width: 100%;
+    color: white;
+    row-gap: 5px;
+  }
+
+  .nav__container-links a,
+  .nav__container-links button {
+    color: white !important;
+    font-size: 18px;
+    margin-left: 15px;
+    text-decoration: none;
+  }
+
+  .nav__container-links a:hover,
+  .nav__container-links button:hover {
+    color: #ccc;
+  }
+
+  .nav__container-links button.nav__btn-active-saved-news {
+    border-bottom: 2px solid white !important;
+    color: white !important;
   }
 
   .nav__menu-icon {
@@ -386,17 +407,17 @@
 
   .nav__btn {
     font-size: 18px;
+    margin-left: 15px;
+  }
+
+  .nav__button-action {
+    display: flex;
+    align-items: flex-end;
   }
   .nav__btn-saved-news {
     font-size: 18px;
   }
-  .nav__btn-active {
-    height: 56px;
-  }
 
-  .nav__btn-active-saved-news {
-    height: 56px;
-  }
   .nav__btn-signin {
     max-width: 100px;
     width: 100px;
@@ -408,14 +429,23 @@
     background-repeat: no-repeat;
     background-position: center right 12px;
     font-size: 14px;
-    padding: 6px 35px 6px 10px;
+    padding: 6px 25px 6px 10px;
+    margin-left: 15px;
+    border: 1px solid #fff;
+    width: 112px;
+    height: 48px;
+    margin-top: 15px;
   }
   .nav__btn-logout-saved-news {
-    font-size: 14px;
-    padding: 6px 35px 6px 10px;
+    background-image: url(../../images/logout-button-white.svg);
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: center right 12px;
+    margin-top: 15px;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 6px 35px 6px 0px;
   }
 
   .nav__right-container {
@@ -426,7 +456,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.8) !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
     width: 100vw;
     height: 100vh;
     padding-top: 32px;
@@ -460,6 +490,7 @@
     height: 56px;
     width: 100vh;
     z-index: 5000;
+    margin-left: 15px;
 
     cursor: pointer;
   }
@@ -478,5 +509,15 @@
     cursor: pointer;
     z-index: 1001;
     right: 16px;
+  }
+
+  .nav__btn-active-saved-news {
+    border-bottom: 2px solid white !important;
+    color: white !important;
+    margin-left: 0 !important;
+  }
+
+  .nav__btn-active-home {
+    margin-bottom: 22px;
   }
 }
