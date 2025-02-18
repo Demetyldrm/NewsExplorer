@@ -277,19 +277,33 @@
   .newscard__info-container {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 304px !important;
+    padding: 0 24px 16px;
+    box-sizing: border-box;
   }
   .newscard__image {
-    width: 400px;
-    max-height: 272px;
+    width: 100%;
+    height: 100%;
     border-radius: 10px 10px 0 0;
+  }
+
+  .newscard__image-container {
+    height: 272px !important;
+    max-height: 272px !important;
+    overflow: hidden;
+    object-fit: cover;
+    margin-bottom: 0;
+    padding: 0;
   }
   .newscard {
     max-width: 100%;
   }
   .newscard__container {
-    width: 320px;
-    max-width: 320px;
-    max-height: 576px;
+    width: 400px !important;
+    max-width: 400px !important;
+    height: 576px !important;
+    box-sizing: border-box;
     margin: 0 auto;
   }
 
@@ -369,10 +383,10 @@
     height: 420px;
   }
 
-  .newscard__image-container {
+  /* .newscard__image-container {
     max-height: 150px;
     margin-bottom: 0;
-  }
+  } */
 
   .newscard__image {
     height: 100%;

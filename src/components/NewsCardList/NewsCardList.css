@@ -125,10 +125,9 @@
 @media screen and (min-width: 1024px) {
   .newscardlist__container {
     display: grid;
-    grid-template-columns: repeat(3, minmax(320px, 320px));
-    column-gap: 8px;
-    row-gap: 8px;
-    margin: 0 auto;
+    grid-template-columns: repeat(3, 400px);
+    column-gap: 16px;
+    row-gap: 16px;
     justify-content: center;
   }
 }

@@ -34,7 +34,7 @@ function Navigation({ isLoggedIn, currentUser, onSignInModal, onLogout }) {
         }`}
         onClick={(e) => {
           e.stopPropagation();
-          setMenuOpen(!menuOpen);
+          setMenuOpen((prev) => !prev);
         }}
       >
         <span></span>

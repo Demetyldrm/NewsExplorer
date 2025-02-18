@@ -351,37 +351,38 @@
 
   .nav__button-action {
     display: flex;
-    justify-content: left;
-    align-items: flex-end;
+    align-items: center;
     font-family: "Roboto", sans-serif;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0;
-    margin-left: 15px;
+    padding-left: 16px;
+    padding-top: 16px;
   }
 
   .nav__container-links {
     display: flex !important;
     flex-direction: column !important;
     align-items: flex-start !important;
-    justify-content: space-between !important;
-    padding: 0 !important;
+    justify-content: space-around !important;
+    padding-top: 8px !important;
+    height: 230px !important;
+    padding-left: 0 !important;
     opacity: 1 !important;
     visibility: visible !important;
     background-color: rgba(0, 0, 0, 0.5) !important;
     width: 100%;
     color: white;
-    row-gap: 5px;
+    row-gap: 2px;
   }
 
-  .nav__container-links a,
+  /* .nav__container-links a,
   .nav__container-links button {
     color: white !important;
     font-size: 18px;
-    margin-left: 15px;
+    margin-left: 16px;
     text-decoration: none;
-  }
+  } */
 
   .nav__container-links a:hover,
   .nav__container-links button:hover {
@@ -405,15 +406,15 @@
     right: 16px;
   }
 
+  .nav__menu-icon.open {
+    opacity: 1 !important;
+    z-index: 3000;
+  }
   .nav__btn {
     font-size: 18px;
     margin-left: 15px;
   }
 
-  .nav__button-action {
-    display: flex;
-    align-items: flex-end;
-  }
   .nav__btn-saved-news {
     font-size: 18px;
   }
@@ -428,7 +429,7 @@
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: center right 12px;
-    font-size: 14px;
+    font-size: 18px;
     padding: 6px 25px 6px 10px;
     margin-left: 15px;
     border: 1px solid #fff;
@@ -451,15 +452,14 @@
   .nav__right-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: flex-start;
     position: fixed;
-    top: 0;
+    top: -10px;
     left: 0;
     background-color: rgba(0, 0, 0, 0.5) !important;
     width: 100vw;
     height: 100vh;
-    padding-top: 32px;
+    padding-top: 16px;
     pointer-events: none;
     opacity: 1 !important;
     visibility: visible !important;
@@ -518,6 +518,7 @@
   }
 
   .nav__btn-active-home {
-    margin-bottom: 22px;
+    margin-bottom: 0 !important;
+    font-size: 18px;
   }
 }

@@ -5,6 +5,7 @@
 }
 
 .header {
+  max-width: 1440px;
   background-image: url("../../images/backgroundImage.png");
   background-size: cover;
   background-position: center;
@@ -19,7 +20,7 @@
 }
 
 .header__container {
-  max-width: 608px;
+  max-width: 1440px;
   text-align: center;
   margin: 0 auto;
   display: flex;
@@ -63,7 +64,7 @@
   }
 
   .header-content {
-    max-width: 80%;
+    max-width: 100%;
     padding: 0;
   }
 
