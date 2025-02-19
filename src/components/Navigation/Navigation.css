@@ -522,3 +522,12 @@
     font-size: 18px;
   }
 }
+@media screen and (min-width: 1440px) {
+  .nav {
+    width: 1440px;
+  }
+
+  .nav__logo {
+    margin-left: auto;
+  }
+}

@@ -165,3 +165,8 @@
     height: 500px;
   }
 }
+@media screen and (min-width: 1440px) {
+  .header-content {
+    min-width: 1440px;
+  }
+}

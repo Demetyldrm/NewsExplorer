@@ -292,12 +292,14 @@ img {
   .newscard__container {
     width: 288px !important;
     max-width: 288px !important;
+    max-height: 440px !important;
     margin: auto 16px;
     box-sizing: border-box;
   }
 
   .newscard__info-container {
     max-width: 288px !important;
+    min-height: 244px !important;
     box-sizing: border-box;
   }
 
@@ -322,14 +324,28 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 400px;
     height: 304px !important;
     padding: 0 24px 16px;
     box-sizing: border-box;
   }
   .newscard__image {
     width: 100%;
+    max-width: 400px;
     height: 100%;
     border-radius: 25px 25px 0 0;
+  }
+
+  .newscard__keyword {
+    left: 24px;
+  }
+  .newscard__bookmark-button {
+    margin-top: 20px;
+  }
+
+  .newscard__bookmark-message {
+    margin-top: 20px;
+    padding: 15px;
   }
 
   .newscard__image-container {
@@ -346,7 +362,7 @@ img {
   .newscard__container {
     width: 400px !important;
     max-width: 400px !important;
-    height: 576px !important;
+    /* height: 576px !important; */
     box-sizing: border-box;
     margin: 0 auto;
     padding: 16px !important;
@@ -365,12 +381,12 @@ img {
   }
   .newscard__info-publisher {
     font-family: "Roboto Slab", sans-serif;
-    margin: auto 24px 24px 0px;
+    /* margin: auto 24px 24px 0px; */
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;
     color: rgba(182, 188, 191, 1);
-    overflow: hidden;
+    /* overflow: hidden; */
   }
   /* .newscard__container {
     width: 100%;
@@ -429,13 +445,14 @@ img {
   }
 
   .newscard__image-container {
-    max-height: 150px;
+    max-width: 224px;
+    height: 150px !important;
     margin-bottom: 0;
   }
 
   .newscard__image {
     height: 100%;
-    border-radius: 10px 10px 0 0;
+    border-radius: 25px 25px 0 0;
   }
 
   .newscard__info-container {
@@ -445,8 +462,13 @@ img {
     flex-direction: column;
     justify-content: flex-start;
     padding: 0px 24px 16px;
+    border-radius: 25px;
     gap: 10px;
     flex-grow: 1;
+  }
+
+  .newscard__bookmark-button {
+    margin-right: -10px;
   }
 
   .newscard__info-container {
@@ -486,6 +508,10 @@ img {
     max-width: 100%;
   }
 
+  .newscard__image {
+    width: 400px;
+  }
+
   .newscard__image-container {
     width: 100%;
     max-width: 100%;
@@ -516,4 +542,24 @@ img {
     top: 50px;
     gap: 8px;
   }
+
+  .newscard__image-container {
+    width: 400px;
+  }
+
+  .newscard__image {
+    width: 100%;
+  }
+
+  .newscard__info-container {
+    padding-top: 20px;
+  }
+
+  .newscard__delete-button {
+    top: -10px;
+  }
+
+  /* .newscard__info-title {
+    margin-bottom: 20px;
+  } */
 }
