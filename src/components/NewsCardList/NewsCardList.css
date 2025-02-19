@@ -126,7 +126,7 @@
   .newscardlist__container {
     display: grid;
     grid-template-columns: repeat(3, 400px);
-    column-gap: 16px;
+    /* column-gap: 16px; */
     row-gap: 16px;
     justify-content: center;
   }

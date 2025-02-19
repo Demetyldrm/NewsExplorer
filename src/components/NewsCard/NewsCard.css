@@ -1,14 +1,57 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 4%;
+  max-width: 1200px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.column {
+  flex: 1 1 30%;
+  max-width: 30%;
+  padding: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 .newscard__container {
   list-style: none;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 320px;
+  width: 100%;
+  max-width: 320px;
   height: auto;
-  margin: 0 auto;
-  flex-shrink: 0;
-  margin: 0 auto;
+  overflow: hidden;
 }
 
 .newscard {
@@ -17,6 +60,7 @@
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 8px;
+  width: 100%;
 }
 
 .newscard__keyword {
@@ -114,17 +158,16 @@
   background: no-repeat url("../../images/delete-button-hover.svg") #fff;
 }
 .newscard__image-container {
-  height: 272px;
-  border-radius: 10px 10px 0 0;
-  height: 272px;
-  margin-bottom: 20px;
-  background-color: #000;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
 }
 
 .newscard__image {
   object-fit: cover;
+  width: 100%;
   height: 100%;
-  max-width: 100%;
 }
 
 .newscard__info-container {
@@ -241,6 +284,7 @@
 
   .newscard__info-publisher {
     font-size: 14px;
+    /* margin: 0 !important; */
   }
 }
 
@@ -248,7 +292,7 @@
   .newscard__container {
     width: 288px !important;
     max-width: 288px !important;
-    margin: 0 auto;
+    margin: auto 16px;
     box-sizing: border-box;
   }
 
@@ -285,7 +329,7 @@
   .newscard__image {
     width: 100%;
     height: 100%;
-    border-radius: 10px 10px 0 0;
+    border-radius: 25px 25px 0 0;
   }
 
   .newscard__image-container {
@@ -305,6 +349,7 @@
     height: 576px !important;
     box-sizing: border-box;
     margin: 0 auto;
+    padding: 16px !important;
   }
 
   .newscard__info-title {
@@ -327,10 +372,10 @@
     color: rgba(182, 188, 191, 1);
     overflow: hidden;
   }
-  .newscard__container {
+  /* .newscard__container {
     width: 100%;
     max-width: 400px;
-  }
+  } */
 
   .newscard__info-date {
     margin-top: 0;
@@ -383,10 +428,10 @@
     height: 420px;
   }
 
-  /* .newscard__image-container {
+  .newscard__image-container {
     max-height: 150px;
     margin-bottom: 0;
-  } */
+  }
 
   .newscard__image {
     height: 100%;
@@ -407,5 +452,68 @@
   .newscard__info-container {
     gap: 5px;
     flex-grow: 1;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 708px) {
+  .newscard__container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .newscard {
+    margin: 8px auto;
+    width: 100%;
+  }
+
+  .newscard__image-container {
+    height: auto;
+    max-height: 100px;
+  }
+}
+@media screen and (min-width: 1020px) and (max-width: 1260px) {
+  .newscard__container {
+    max-width: 100%;
+    padding: 0 20px;
+    margin: 0 -25px auto;
+    overflow: hidden;
+  }
+
+  .newscard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  .newscard__image-container {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .newscard__info-container {
+    padding: 10px 15px;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+}
+@media screen and (max-width: 610px) {
+  .newscard__image-container {
+    max-height: 90px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .newscard__bookmark {
+    position: absolute;
+    display: flex;
+    max-height: 40px;
+    right: 24px;
+    top: 50px;
+    gap: 8px;
   }
 }

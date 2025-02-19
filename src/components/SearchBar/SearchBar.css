@@ -66,8 +66,11 @@
 }
 
 @media screen and (max-width: 768px) {
+  /* .search {
+    width: 452px !important;
+  } */
   .search__container {
-    max-width: 90%;
+    max-width: 100%;
   }
   .search__form-container {
     max-width: 452px;
