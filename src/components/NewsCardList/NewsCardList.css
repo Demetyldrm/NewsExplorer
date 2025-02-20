@@ -23,8 +23,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0 auto;
-  padding: 0 16px;
+  /* margin: 0 auto; */
+  /* padding: 0 16px; */
 }
 
 .newscardlist__button-show-more {
@@ -54,6 +54,7 @@
 @media screen and (max-width: 768px) {
   .newscardlist {
     max-width: 750px;
+    margin: 0;
   }
   .newscardlist__title {
     font-size: 18px;
@@ -64,9 +65,10 @@
   .newscardlist__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 2px;
+    column-gap: 16px;
     row-gap: 2px;
     margin: 0 !important;
+    padding: 0;
   }
 
   .newscardlist__button {
@@ -93,6 +95,8 @@
     grid-template-columns: repeat(1, 1fr);
     max-width: 288px;
     padding: 0;
+    row-gap: 10px !important;
+
     justify-content: center;
   }
 }
@@ -126,8 +130,9 @@
   .newscardlist__container {
     display: grid;
     grid-template-columns: repeat(3, 400px);
-    /* column-gap: 16px; */
-    row-gap: 16px;
+    column-gap: 16px;
+    /* row-gap: 16px; */
     justify-content: center;
+    padding: 0;
   }
 }
