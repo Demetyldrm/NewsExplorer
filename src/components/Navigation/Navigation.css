@@ -2,10 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1440px;
-
   height: 80px;
-  /* margin: 0 auto; */
   border-bottom: 1px solid rgba(196, 196, 196, 0.3);
 }
 
@@ -20,9 +17,7 @@
   font-weight: 700;
   line-height: 24px;
   color: #ffffff;
-  margin: 0;
   border-bottom: 3px solid transparent;
-  margin-left: 20px;
 }
 
 .nav__logo-home {
@@ -38,6 +33,7 @@
   column-gap: 35px;
   align-items: center;
   list-style-type: none;
+  /* margin-right: 104px; */
 }
 
 .nav__logo-link {
@@ -352,16 +348,16 @@
     background: none;
     border: none;
     cursor: pointer;
-    padding-left: 16px;
-    padding-top: 16px;
+
+    color: #fff !important;
   }
 
   .nav__container-links {
     display: flex !important;
     flex-direction: column !important;
     align-items: flex-start !important;
-    justify-content: space-around !important;
-    /* padding-top: 8px !important; */
+    /* justify-content: space-around !important; */
+    padding-top: 8px !important;
     height: 230px !important;
     padding-left: 0 !important;
     opacity: 1 !important;
@@ -372,13 +368,13 @@
     row-gap: 2px;
   }
 
-  /* .nav__container-links a,
+  .nav__container-links a,
   .nav__container-links button {
     color: white !important;
     font-size: 18px;
     margin-left: 16px;
     text-decoration: none;
-  } */
+  }
 
   .nav__container-links a:hover,
   .nav__container-links button:hover {
@@ -413,24 +409,23 @@
 
   .nav__btn-saved-news {
     font-size: 18px;
+    margin: 0 !important;
   }
 
   .nav__btn-signin {
     max-width: 100px;
     width: 100px;
     font-size: 14px;
-    padding: 6px 10px;
   }
   .nav__btn-logout {
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: center right 12px;
     font-size: 18px;
-    padding: 6px 25px 6px 10px;
-    margin-left: 15px;
+    margin-left: 16px;
     border: 1px solid #fff;
     width: 112px;
-    height: 48px;
+    height: 38px;
     margin-top: 15px;
   }
   .nav__btn-logout-saved-news {
@@ -442,7 +437,6 @@
     border-radius: 100px;
     cursor: pointer;
     font-size: 14px;
-    padding: 6px 35px 6px 0px;
     color: #fff;
   }
 
@@ -487,8 +481,6 @@
     height: 56px;
     width: 100vh;
     z-index: 5000;
-    margin-left: 15px;
-
     cursor: pointer;
   }
 
@@ -511,12 +503,11 @@
   .nav__btn-active-saved-news {
     border-bottom: 2px solid white !important;
     color: white !important;
-    margin-left: 0 !important;
   }
 
   .nav__btn-active-home {
     margin-bottom: 0 !important;
-    font-size: 18px;
+    font-size: 18px !important;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -526,11 +517,12 @@
   }
 
   .nav__logo-home {
-    margin-left: 20px !important;
+    margin-left: 104px !important;
   }
 
   .nav__container-links {
     padding: 0 !important;
+    margin-right: 104px;
   }
 
   .nav__logo-saved-news {
