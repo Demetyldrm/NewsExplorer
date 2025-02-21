@@ -57,4 +57,11 @@
     max-width: 272px;
     max-height: 272px;
   }
+
+  .about__title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+  }
 }

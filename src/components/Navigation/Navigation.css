@@ -443,6 +443,7 @@
     cursor: pointer;
     font-size: 14px;
     padding: 6px 35px 6px 0px;
+    color: #fff;
   }
 
   .nav__right-container {
@@ -520,7 +521,7 @@
 }
 @media screen and (min-width: 1440px) {
   .nav {
-    width: 1440px;
+    min-width: 1440px;
     margin: 0;
   }
 

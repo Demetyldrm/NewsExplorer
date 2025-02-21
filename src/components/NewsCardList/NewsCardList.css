@@ -99,6 +99,13 @@
 
     justify-content: center;
   }
+
+  .newscardlist__result {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 34px;
+    margin-left: 16px;
+  }
 }
 
 @media screen and (max-width: 295px) {
