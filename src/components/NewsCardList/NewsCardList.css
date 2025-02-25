@@ -19,14 +19,6 @@
   margin-right: auto;
 }
 
-.newscardlist__container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  /* margin: 0 auto; */
-  /* padding: 0 16px; */
-}
-
 .newscardlist__button-show-more {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
@@ -53,7 +45,6 @@
 
 @media screen and (max-width: 768px) {
   .newscardlist {
-    max-width: 750px;
     margin: 0;
   }
   .newscardlist__title {
@@ -96,7 +87,6 @@
     max-width: 288px;
     padding: 0;
     row-gap: 10px !important;
-
     justify-content: center;
   }
 
@@ -136,10 +126,9 @@
 @media screen and (min-width: 1024px) {
   .newscardlist__container {
     display: grid;
-    grid-template-columns: repeat(3, 400px);
+    grid-template-columns: repeat(3, 1fr);
     column-gap: 16px;
-    /* row-gap: 16px; */
     justify-content: center;
-    padding: 0;
+    padding: 0rem 1rem;
   }
 }
