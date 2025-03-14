@@ -17,7 +17,7 @@ This app was built as part of my TripleTen final project. It is a **React-based 
 - 🔎 Search for news articles by topic
 - 📌 Save favorite articles (requires authentication)
 - 🌐 Responsive design for mobile and desktop
-- 🚀 Deployed on GitHub Pages
+- 🚀 Deployed on GitHub Pages.
 
 # Second stage of the project
 
