@@ -37,3 +37,6 @@ Some of the components and classes are created for the second portion of the fin
    ```bash
    git clone https://github.com/demetyldrm/stage-1-frontend-api.git
    ```
+   
+<img width="1512" alt="42DAE362-AC34-4EFD-9234-FF9321506EBF" src="https://github.com/user-attachments/assets/231a66cc-3c78-4159-b459-37fd75eba630" />
+<img width="1512" alt="AE679144-C005-4ED9-BAA0-559E14C44638" src="https://github.com/user-attachments/assets/7192ee3f-1f74-4bfa-b414-d2cdf5da79f3" />
