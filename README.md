@@ -40,3 +40,5 @@ Some of the components and classes are created for the second portion of the fin
    
 <img width="1512" alt="42DAE362-AC34-4EFD-9234-FF9321506EBF" src="https://github.com/user-attachments/assets/231a66cc-3c78-4159-b459-37fd75eba630" />
 <img width="1512" alt="AE679144-C005-4ED9-BAA0-559E14C44638" src="https://github.com/user-attachments/assets/7192ee3f-1f74-4bfa-b414-d2cdf5da79f3" />
+<img width="1512" alt="412F2D23-2934-4976-BCF0-E1D9FE7A5FC6" src="https://github.com/user-attachments/assets/08870f7b-4502-464f-92fe-c43d0c9483fd" />
+<img width="1512" alt="74EEE815-6B00-4616-84D1-2EF92D7F21AC" src="https://github.com/user-attachments/assets/d8d72f60-7b83-40af-93e6-43f79b686afa" />
